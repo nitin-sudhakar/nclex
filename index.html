@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO: Primary Meta Tags -->
+    <title>Abrahams NCLEX | Premier Nursing Coaching & Global Career Mentorship</title>
+    <meta name="description" content="Unlock your global nursing career with Abrahams NCLEX. Led by Accama Abraham, we offer specialized NCLEX coaching, bilingual classes (English & Malayalam), and personalized mentorship for nurses in Kerala and beyond.">
+    <meta name="keywords" content="NCLEX coaching, nursing career, Accama Abraham, NCLEX exam preparation, nurse mentorship, global nursing, Kerala nurses, bilingual NCLEX classes">
+    <meta name="author" content="Abrahams NCLEX">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://abrahamsnclex.com">
+
+    <!-- Social Media / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abrahamsnclex.com/">
+    <meta property="og:title" content="Abrahams NCLEX - Master the Exam, Go Global">
+    <meta property="og:description" content="Join the premier NCLEX coaching institute. Expert mentorship by Accama Abraham, flexible schedules, and proven results.">
+    <meta property="og:image" content="https://i.imgur.com/TRn2PDn.jpeg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Abrahams NCLEX",
+      "url": "https://abrahamsnclex.com",
+      "logo": "https://i.imgur.com/TRn2PDn.jpeg",
+      "description": "Premier NCLEX coaching institute helping nurses build global careers. Expert mentorship by Accama Abraham.",
+      "slogan": "Unlock Your NCLEX Potential",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "100 Address 1, Street, 6th Floor",
+        "addressLocality": "Kerala",
+        "postalCode": "94158",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 99955 15565",
+        "contactType": "admissions",
+        "email": "abrahams@abrahamsnclex.com",
+        "areaServed": "Global",
+        "availableLanguage": ["English", "Malayalam"]
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Accama Abraham",
+        "jobTitle": "Lead Mentor & Trainer",
+        "image": "https://i.imgur.com/JtWXokr.jpeg",
+        "description": "Internationally acclaimed nursing leader with over 30 years of experience in transforming nursing practices."
+      },
+      "makesOffer": {
+        "@type": "Course",
+        "name": "NCLEX Preparation Course",
+        "description": "Comprehensive NCLEX training with mock tests, flexible scheduling, and bilingual support.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "Abrahams NCLEX"
+        }
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Color Palette --- */
+        :root {
+            --primary: #13223f;
+            --primary-light: #1e3a66;
+            --accent: #d97706;
+            --accent-hover: #b45309;
+        }
+
+        .text-primary { color: var(--primary); }
+        .bg-primary { background-color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+
+        /* --- Animations --- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating Blobs Background */
+        .blob {
+            position: absolute;
+            filter: blur(50px);
+            z-index: 0;
+            opacity: 0.6;
+            animation: float 10s infinite ease-in-out;
+        }
+        .blob-1 { top: -10%; right: -10%; width: 400px; height: 400px; background: #bfdbfe; animation-delay: 0s; }
+        .blob-2 { bottom: -10%; left: -10%; width: 300px; height: 300px; background: #fde68a; animation-delay: 5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -20px); }
+        }
+
+        /* Hover Effects */
+        .feature-card {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-bottom-color: var(--accent);
+        }
+
+        .image-hover-zoom {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .image-hover-zoom img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-hover-zoom:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(19, 34, 63, 0.3);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        .hidden-view { display: none; }
+
+        /* Testimonial Transitions */
+        .testimonial-fade {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .testimonial-hidden {
+            opacity: 0;
+        }
+        .testimonial-visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-primary border-b border-white/10 transition-all duration-300 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" onclick="switchView('home'); return false;" class="flex items-center gap-3">
+                        <img src="https://i.imgur.com/TRn2PDn.jpeg" 
+                             alt="Abrahams NCLEX" 
+                             class="h-16 w-auto object-contain"
+                             onerror="this.style.display='none'; document.getElementById('nav-logo-text').classList.remove('hidden');">
+                        
+                        <span id="nav-logo-text" class="hidden serif-font text-2xl font-bold tracking-wide text-white">
+                            ABRAHAMS <span class="text-accent italic text-xl">NCLEX</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#home" onclick="switchView('home')" class="text-xs uppercase tracking-[0.2em] font-semibold text-slate-300 hover:text-white transition-colors">Home</a>
+                    <a href="#program" onclick="switchView('home')" class="text-xs uppercase tracking-[0.2em] font-semibold text-slate-300 hover:text-white transition-colors">Program</a>
+                    <a href="#mentor" onclick="switchView('home')" class="text-xs uppercase tracking-[0.2em] font-semibold text-slate-300 hover:text-white transition-colors">Mentorship</a>
+                    <a href="#testimonials" onclick="switchView('home'); document.getElementById('philosophy').scrollIntoView();" class="text-xs uppercase tracking-[0.2em] font-semibold text-slate-300 hover:text-white transition-colors">Stories</a>
+                    
+                    <a href="#contact" onclick="switchView('home')" class="px-8 py-3 bg-white text-primary text-xs uppercase tracking-[0.2em] font-bold rounded-sm hover:bg-slate-100 transition-all shadow-md hover:shadow-lg">Enroll Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-6 py-6 space-y-4 flex flex-col items-center">
+                <a href="#" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-semibold text-slate-800 py-2 hover:text-accent">Home</a>
+                <a href="#program" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-semibold text-slate-800 py-2 hover:text-accent">Program</a>
+                <a href="#mentor" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-semibold text-slate-800 py-2 hover:text-accent">Mentorship</a>
+                <a href="#contact" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-bold text-accent py-2">Enroll Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN HOME VIEW CONTAINER -->
+    <div id="home-view">
+        <!-- Hero Section -->
+        <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 flex flex-col items-center justify-center min-h-[90vh] overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50">
+            <!-- Floating Background Elements -->
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            
+            <div class="max-w-5xl mx-auto text-center z-10 relative">
+                
+                <h1 class="fade-in-up delay-100 leading-tight mb-8">
+                    <!-- Tier 1: Lead-in -->
+                    <span class="block text-lg md:text-xl font-medium tracking-[0.3em] text-slate-500 uppercase mb-4">
+                        Unlock Your
+                    </span>
+                    
+                    <!-- Tier 2: Main Subject -->
+                    <span class="block serif-font text-6xl md:text-8xl lg:text-9xl font-bold text-primary mb-2 drop-shadow-sm">
+                        NCLEX
+                    </span>
+                    
+                    <!-- Tier 3: Dynamic Closing -->
+                    <span class="block serif-font text-5xl md:text-6xl lg:text-7xl font-light italic text-accent relative inline-block">
+                        Potential
+                        <svg class="absolute w-full h-3 -bottom-2 left-0 text-accent/30 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="4" fill="none" />
+                        </svg>
+                    </span>
+                </h1>
+                
+                <p class="fade-in-up delay-200 text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed mb-12">
+                    Gain the confidence you need to appear for the NCLEX exam. We are your partner in building a rewarding <strong class="text-primary font-medium">global nursing career</strong>.
+                </p>
+                
+                <div class="fade-in-up delay-300 flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#contact" class="btn-primary group inline-flex items-center justify-center px-8 py-4 text-xs uppercase tracking-widest font-bold rounded-sm shadow-lg hover:shadow-xl">
+                        Begin Your Journey
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#about" class="group inline-flex items-center justify-center space-x-2 text-primary border-b-2 border-transparent hover:border-accent pb-1 transition-all">
+                        <span class="text-xs uppercase tracking-widest font-bold">Explore Program</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-accent group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- About / Intro Section -->
+        <section id="about" class="py-32 bg-gradient-to-b from-blue-50 via-white to-white relative overflow-hidden">
+            <!-- Subtle Animated Mesh Background -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-50/50 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-float"></div>
+                <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-orange-50/50 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-float" style="animation-delay: 2s"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+                <span class="fade-in-up inline-block text-xs font-bold uppercase tracking-[0.3em] text-accent mb-6 border border-accent/20 px-3 py-1 rounded-full bg-white/50 backdrop-blur-sm">
+                    The Abrahams Approach
+                </span>
+                
+                <h2 class="fade-in-up delay-100 serif-font text-4xl md:text-5xl lg:text-6xl text-primary mb-10 leading-tight">
+                    Whether you're aspiring to work abroad or seeking to enhance your clinical knowledge, <span class="italic text-accent font-medium relative inline-block">
+                        Abrahams
+                        <span class="absolute bottom-1 left-0 w-full h-2 bg-accent/10 -z-10 transform -rotate-1"></span>
+                    </span> is your trusted partner.
+                </h2>
+                
+                <div class="fade-in-up delay-200 flex justify-center mb-10">
+                    <div class="w-24 h-1.5 rounded-full bg-gradient-to-r from-blue-200 via-accent to-blue-200 opacity-80"></div>
+                </div>
+                
+                <p class="fade-in-up delay-300 text-slate-600 font-light leading-loose text-lg md:text-xl max-w-2xl mx-auto">
+                    We focus on your success and global career opportunities through a unique blend of <strong class="text-primary font-medium">deep clinical knowledge</strong> and <strong class="text-primary font-medium">practical skill-building</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Program Features Grid -->
+        <section id="program" class="py-24 bg-gradient-to-b from-white to-slate-50">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.2em] text-accent font-bold block mb-4">Why Choose Us</span>
+                        <h2 class="serif-font text-3xl md:text-4xl text-primary font-bold">Curated for Excellence</h2>
+                    </div>
+                    <a href="#contact" class="hidden md:inline-block text-xs uppercase tracking-widest border border-slate-300 px-6 py-3 hover:border-primary hover:text-primary transition-all font-semibold">Enroll Today</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i data-lucide="clock" class="w-6 h-6 text-primary group-hover:text-accent transition-colors"></i>
+                        </div>
+                        <h3 class="serif-font text-xl mb-3 text-primary font-bold">Flexible Schedule</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Attend live classes or cover at your own pace with our comprehensive library of recorded sessions.
+                        </p>
+                    </div>
+
+                    <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
+                        <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
+                            <i data-lucide="check-square" class="w-6 h-6 text-accent group-hover:text-primary transition-colors"></i>
+                        </div>
+                        <h3 class="serif-font text-xl mb-3 text-primary font-bold">Mock Tests</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Keep practicing with regular Mock Tests designed to simulate the real exam environment.
+                        </p>
+                    </div>
+
+                    <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i data-lucide="users" class="w-6 h-6 text-primary group-hover:text-accent transition-colors"></i>
+                        </div>
+                        <h3 class="serif-font text-xl mb-3 text-primary font-bold">Small Batches</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            We maintain small batch sizes to ensure personalized attention and interaction for every student.
+                        </p>
+                    </div>
+
+                    <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
+                        <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
+                            <i data-lucide="user-check" class="w-6 h-6 text-accent group-hover:text-primary transition-colors"></i>
+                        </div>
+                        <h3 class="serif-font text-xl mb-3 text-primary font-bold">Personal Mentorship</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            One-on-one mentorship and interaction sessions to guide you through difficult concepts.
+                        </p>
+                    </div>
+
+                    <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i data-lucide="zap" class="w-6 h-6 text-primary group-hover:text-accent transition-colors"></i>
+                        </div>
+                        <h3 class="serif-font text-xl mb-3 text-primary font-bold">Fast Track</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Efficient course structure with completion targeted in 3 months for rapid career progression.
+                        </p>
+                    </div>
+
+                    <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
+                        <div class="w-12 h-12 bg-orange-50 rounded-lg mb-6 group-hover:bg-accent transition-colors relative">
+                            <span class="absolute top-1.5 left-2.5 text-accent group-hover:text-primary transition-colors font-serif font-bold text-lg leading-none">A</span>
+                            <span class="absolute bottom-1 right-2 text-accent group-hover:text-primary transition-colors font-sans font-bold text-xl leading-none">അ</span>
+                        </div>
+                        <h3 class="serif-font text-xl mb-3 text-primary font-bold">Bilingual Classes</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Specialized Malayalam & English classes focused specifically on the needs of Nurses from Kerala.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mentor Section -->
+        <section id="mentor" class="pt-24 lg:pt-32 pb-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                    <div class="w-full lg:w-1/2">
+                        <div class="relative w-full">
+                            <div id="mentor-photo-container" class="w-full flex items-center justify-center text-slate-300">
+                                <div class="text-center py-20 bg-slate-50 w-full rounded-2xl" id="mentor-photo-fallback">
+                                    <i data-lucide="image" class="w-12 h-12 mx-auto mb-2 opacity-50 text-accent"></i>
+                                    <span class="text-xs uppercase tracking-widest font-bold">Mentor: Accama Abraham</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-px w-8 bg-accent"></div>
+                            <span class="text-xs uppercase tracking-[0.2em] text-accent font-bold">Lead Mentor</span>
+                        </div>
+                        <h2 class="serif-font text-4xl lg:text-5xl text-primary mb-6 font-bold">Accama Abraham</h2>
+                        <p class="text-slate-500 italic mb-8 text-lg font-medium">Recognized Nursing Leader & Trainer</p>
+                        
+                        <div class="space-y-6 text-slate-600 font-light leading-relaxed text-lg">
+                            <p>
+                                She has remained a sought-after guide for nurses from diverse backgrounds. What sets her apart is the ability to connect with students, personalise learning paths and simplify even the trickiest topics.
+                            </p>
+                            <p>
+                                You're in safe hands, whether you're just starting or re-attempting the exam.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <button type="button" onclick="switchView('mentor')" class="btn-accent inline-flex items-center space-x-2 px-8 py-3 rounded-sm font-bold text-xs uppercase tracking-widest shadow-lg cursor-pointer hover:scale-105 transition-transform duration-200">
+                                <span>Know More</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy / Mission / Testimonials Slider -->
+        <section id="philosophy" class="pt-24 pb-0 bg-primary text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+            </div>
+            
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div class="order-2 lg:order-1 pb-24 lg:pb-40">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-12 h-0.5 bg-accent"></span>
+                            <span class="text-accent font-bold uppercase tracking-[0.2em] text-xs">Our Philosophy</span>
+                        </div>
+                        <h2 class="serif-font text-4xl md:text-5xl mb-8 font-bold leading-tight">Beyond The Exam.<br>Ready for the World.</h2>
+                        <p class="text-blue-100 font-light leading-loose mb-8 text-lg opacity-90">
+                            ABRAHAMS believes that NCLEX success is just the beginning. Our mission is to enrich nurses' knowledge with thorough subject mastery, empowering them to excel in their roles and elevate their careers to new heights.
+                        </p>
+                        <p class="text-blue-100 font-light leading-loose text-lg opacity-90">
+                            By fostering deep subject proficiency and critical skills, we aim to nurture globally competitive nursing professionals who deliver exceptional patient care.
+                        </p>
+                    </div>
+                    
+                    <div class="order-1 lg:order-2 relative perspective-1000 pb-24 lg:pb-40">
+                        <div id="testimonial-card" class="relative bg-white/5 backdrop-blur-md border border-white/10 text-white p-10 md:p-12 rounded-2xl shadow-2xl overflow-hidden min-h-[400px] flex flex-col justify-between transform transition-all duration-500 hover:-translate-y-1">
+                            
+                            <div class="absolute -top-6 -left-2 text-[10rem] leading-none text-white/5 serif-font select-none z-0">"</div>
+                            
+                            <div class="relative z-10 flex-grow flex flex-col justify-center">
+                                <div id="testimonial-content-wrapper" class="transition-all duration-500 transform translate-y-0 opacity-100">
+                                    <div class="flex gap-1 mb-6 text-accent">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    
+                                    <blockquote id="testimonial-text" class="serif-font text-xl md:text-2xl font-medium leading-relaxed mb-8 text-white">
+                                        "Abrahams is a game-changer. The emphasis on subject mastery boosted my confidence in appearing for NCLEX."
+                                    </blockquote>
+                                    
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-primary font-bold text-lg shadow-lg">
+                                            <span id="testimonial-avatar">N</span>
+                                        </div>
+                                        <div>
+                                            <cite id="testimonial-author" class="not-italic block text-sm font-bold uppercase tracking-widest text-white">Neena</cite>
+                                            <span id="testimonial-role" class="block text-xs font-semibold text-blue-200 mt-0.5">Registered Nurse</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 left-0 w-full h-1 bg-white/10">
+                                <div id="progress-bar" class="h-full bg-accent w-0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent to-primary z-20 pointer-events-none"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pt-0 pb-24 bg-primary relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-primary to-transparent z-10 pointer-events-none"></div>
+
+            <div class="absolute top-[-100px] left-1/2 w-px h-64 bg-gradient-to-b from-transparent via-accent/50 to-transparent -translate-x-1/2 z-30"></div>
+            
+            <div class="absolute top-0 left-1/2 w-1.5 h-1.5 rounded-full bg-accent -translate-x-1/2 z-30 shadow-[0_0_15px_2px_rgba(217,119,6,0.6)]"></div>
+
+            <div class="max-w-6xl mx-auto px-6 lg:px-12 relative z-20 pt-24">
+                <div class="text-center mb-20">
+                    <h4 class="text-accent font-bold uppercase tracking-[0.25em] text-xs mb-6 drop-shadow-[0_0_8px_rgba(217,119,6,0.3)]">
+                        Get In Touch
+                    </h4>
+                    
+                    <h2 class="serif-font text-4xl md:text-5xl lg:text-7xl text-white font-bold mb-8">
+                        Ready to Go Global?
+                    </h2>
+                    <p class="text-blue-100/80 font-light max-w-2xl mx-auto text-lg leading-relaxed">
+                        Your international nursing career begins with a single step. Reach out to our admissions team today.
+                    </p>
+                </div>
+                
+                <div class="border-t border-white/10 pt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                    
+                    <a href="mailto:abrahams@abrahamsnclex.com" class="group flex flex-col items-center text-center">
+                        <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-accent group-hover:border-accent group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <i data-lucide="mail" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="serif-font text-2xl text-white mb-3 group-hover:text-accent transition-colors">Email Us</h3>
+                        <span class="text-blue-200 font-light text-base break-words hover:text-white transition-colors">abrahams@abrahamsnclex.com</span>
+                    </a>
+
+                    <a href="tel:+919995515565" class="group flex flex-col items-center text-center">
+                        <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-accent group-hover:border-accent group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <i data-lucide="phone" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="serif-font text-2xl text-white mb-3 group-hover:text-accent transition-colors">Call Us</h3>
+                        <span class="text-blue-200 font-light text-base hover:text-white transition-colors block">+91 99955 15565</span>
+                        <span class="text-blue-200/50 text-xs uppercase tracking-widest mt-2 block">Mon-Sat, 9am - 6pm IST</span>
+                    </a>
+
+                    <div class="group flex flex-col items-center text-center cursor-default">
+                        <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-accent group-hover:border-accent group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <i data-lucide="map-pin" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="serif-font text-2xl text-white mb-3 group-hover:text-accent transition-colors">Address</h3>
+                        <span class="text-blue-200 font-light text-base block">100 Address 1, Street<br>6th Floor, KL 94158</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- MENTOR PROFILE VIEW CONTAINER -->
+    <div id="mentor-view" class="hidden-view pt-32 pb-24 bg-slate-50 min-h-screen">
+        <div class="fixed top-24 left-0 w-full z-30 pointer-events-none">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <button onclick="switchView('home')" class="pointer-events-auto inline-flex items-center px-4 py-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-full shadow-sm text-sm font-bold text-slate-600 hover:text-primary hover:border-primary transition-all group">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform"></i> Back to Home
+                </button>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                
+                <div class="lg:col-span-5">
+                    <div class="lg:sticky lg:top-40 space-y-8">
+                        <div class="relative bg-white p-2 rounded-2xl shadow-xl border border-slate-100 rotate-1 hover:rotate-0 transition-transform duration-500">
+                            <div class="aspect-[3/4] overflow-hidden rounded-xl relative">
+                                <img src="https://i.imgur.com/JtWXokr.jpeg" 
+                                     alt="Accama Abraham" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.style.display='none';">
+                                <div class="absolute inset-0 border-inner pointer-events-none border-black/5 rounded-xl"></div>
+                            </div>
+                            <div class="pt-6 pb-4 text-center">
+                                <h1 class="serif-font text-3xl font-bold text-primary">Accama Abraham</h1>
+                                <p class="text-accent text-sm font-bold tracking-widest uppercase mt-2">Lead Mentor & Trainer</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-primary text-white p-8 rounded-xl shadow-lg border-l-4 border-accent relative overflow-hidden hidden lg:block">
+                            <i class="fas fa-quote-right text-6xl text-accent/10 absolute -bottom-4 -right-4 transform rotate-12"></i>
+                            
+                            <p class="serif-font text-lg italic leading-relaxed relative z-10 text-blue-50">
+                                Every patient, organization, and country has taught me something unique. My goal is to pass that global wisdom on to you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-16">
+                    
+                    <div class="space-y-6">
+                        <span class="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest rounded-full">Global Nursing Leader</span>
+                        <h2 class="serif-font text-4xl md:text-5xl font-bold text-primary leading-tight">
+                            Shaping the future of the <span class="text-accent">Nursing Profession</span> on an international level.
+                        </h2>
+                        <p class="text-xl text-slate-600 leading-relaxed font-light">
+                            An internationally acclaimed nursing leader with over three decades of experience in transforming nursing practices across the globe, Accamma Abraham is at the helm of Abrahams training division. Her visionary leadership has empowered thousands of nurses to build successful careers in global healthcare.
+                        </p>
+                    </div>
+
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img src="https://i.imgur.com/oOYiXVg.jpeg" 
+                             alt="Training Session" 
+                             class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <div class="space-y-12 divide-y divide-slate-200">
+                        
+                        <div class="pt-8">
+                            <h3 class="serif-font text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                                <span class="w-8 h-px bg-accent"></span> Giving Back
+                            </h3>
+                            <div class="prose text-slate-600 leading-relaxed space-y-4">
+                                <p>
+                                    For Accamma, heading training at Abrahams is more than just a role. With a career built on empowering nurses through knowledge and skill development, she is dedicated to sharing her wealth of experience.
+                                </p>
+                                <p>
+                                    Throughout her career, Accamma has been a dedicated mentor, training nurses in every organization she touched. Her impact extended far beyond the workplace—through word-of-mouth referrals, she became a sought-after guide for nurses from diverse backgrounds.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-12">
+                            <h3 class="serif-font text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                                <span class="w-8 h-px bg-accent"></span> The Vision
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                At Abrahams, Accamma’s vision is clear: to equip nurses with in-depth subject knowledge, practical skills, and global insights. Her hands-on approach ensures that every nurse trained under her guidance is prepared with confidence, competence, and compassion.
+                            </p>
+                        </div>
+
+                        <div class="pt-12">
+                            <h3 class="serif-font text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                                <span class="w-8 h-px bg-accent"></span> A Trailblazer
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Accamma’s illustrious career is marked by exceptional contributions to nursing administration, quality assurance, and workforce development. She has held senior leadership roles in top-tier healthcare institutions, managing large-scale nursing departments in quaternary and tertiary care hospitals.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                        <h3 class="serif-font text-3xl font-bold text-primary mb-8 text-center">Key Achievements</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+                            
+                            <div class="flex gap-4 items-start group">
+                                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
+                                    <i data-lucide="award" class="w-5 h-5 text-primary group-hover:text-accent transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary mb-2">Setting High Standards</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">Leading the way in Professional Nursing Education, Patient care and healthcare policies with a focus on patient safety.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 items-start group">
+                                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary group-hover:text-accent transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary mb-2">Accreditation Expert</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">Pivotal role in achieving international accreditations including JCI, Canadian, Australian, BFHI, ISO, and NABH.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 items-start group">
+                                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
+                                    <i data-lucide="users" class="w-5 h-5 text-primary group-hover:text-accent transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary mb-2">Workforce Development</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">Spearheaded initiatives to build high-performing nursing teams and foster continuous learning.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 items-start group">
+                                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
+                                    <i data-lucide="globe" class="w-5 h-5 text-primary group-hover:text-accent transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary mb-2">Cross Cultural Competence</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">Preparing nurses to work in diverse healthcare environments worldwide.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-10">
+                        <button onclick="switchView('contact'); document.getElementById('contact').scrollIntoView();" class="btn-primary px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform">
+                            Join Accama's Program
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minimal Footer -->
+    <footer class="bg-primary text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs uppercase tracking-widest">
+            <div class="mb-6 md:mb-0 space-y-4 text-center md:text-left">
+                <!-- Footer Logo -->
+                <div class="mb-4">
+                     <img src="https://i.imgur.com/TRn2PDn.jpeg" 
+                          alt="Abrahams NCLEX" 
+                          class="h-10 w-auto object-contain hover:opacity-90 transition-opacity"
+                          onerror="this.style.display='none'; document.getElementById('footer-logo-text').classList.remove('hidden');">
+                    
+                     <span id="footer-logo-text" class="hidden serif-font text-xl font-bold tracking-wide text-white">
+                        ABRAHAMS <span class="text-accent italic text-lg">NCLEX</span>
+                    </span>
+                </div>
+                
+                <div class="text-slate-500">&copy; <span id="year"></span> Abrahams NCLEX</div>
+                <div class="flex space-x-4 text-[10px] text-slate-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                    <a href="#" class="hover:text-white transition-colors">Refunds</a>
+                </div>
+            </div>
+            <div class="flex space-x-8">
+                <a href="#" class="hover:text-accent transition-colors"><i class="fab fa-facebook-f text-lg"></i></a>
+                <a href="#" class="hover:text-accent transition-colors"><i class="fab fa-instagram text-lg"></i></a>
+                <a href="#" class="hover:text-accent transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mentorPhotoUrl = 'https://i.imgur.com/JtWXokr.jpeg'; 
+        
+        document.getElementById('year').textContent = new Date().getFullYear();
+        lucide.createIcons();
+
+        function injectMentorPhoto() {
+            const container = document.getElementById('mentor-photo-container');
+            const fallback = document.getElementById('mentor-photo-fallback');
+            
+            if (!container) return; 
+
+            if (mentorPhotoUrl) {
+                const img = document.createElement('img');
+                img.src = mentorPhotoUrl;
+                img.alt = "Accama Abraham, Lead Mentor";
+                
+                img.className = 'w-full h-full object-cover rounded-2xl shadow-sm';
+                
+                img.onload = () => {
+                    container.innerHTML = '';
+                    container.appendChild(img);
+                };
+                
+                img.onerror = () => {
+                    console.error("Mentor photo failed to load.");
+                    container.appendChild(fallback);
+                };
+
+                container.appendChild(img);
+                fallback.style.display = 'none'; 
+                
+            } else if (fallback) {
+                // If URL is empty, just show the fallback
+                 fallback.style.display = 'block';
+            }
+        }
+        
+        function switchView(viewName) {
+            const homeView = document.getElementById('home-view');
+            const mentorView = document.getElementById('mentor-view');
+
+            if (viewName === 'mentor') {
+                homeView.style.display = 'none';
+                mentorView.style.display = 'block';
+                window.scrollTo(0, 0);
+            } else {
+                homeView.style.display = 'block';
+                mentorView.style.display = 'none';
+                if (viewName === 'contact') {
+                    // Handled by inline scrollIntoView, but keeping this safe
+                }
+            }
+        }
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+        
+        const testimonials = [
+            { text: "\"Abrahams is a game-changer. The emphasis on subject mastery boosted my confidence in appearing for NCLEX.\"", author: "Neena", role: "Registered Nurse" },
+            { text: "\"Abrahams has been instrumental in advancing my nursing career. The courses helped me enhance my skills and knowledge, making me a better nurse and crack NCLEX.\"", author: "Sara Johnson", role: "Registered Nurse" },
+            { text: "\"I can't thank Abrahams enough for the valuable education they provide. The courses are well-structured and have significantly improved my critical thinking abilities.\"", author: "Lakshmi Chandran", role: "Registered Nurse" }
+        ];
+
+        let currentTestimonialIndex = 0;
+        let slideInterval;
+
+        function updateTestimonialDisplay() {
+            const wrapper = document.getElementById('testimonial-content-wrapper');
+            const progressBar = document.getElementById('progress-bar');
+            const textEl = document.getElementById('testimonial-text');
+            const authorEl = document.getElementById('testimonial-author');
+            const avatarEl = document.getElementById('testimonial-avatar');
+            
+            if (!wrapper || !progressBar || !textEl || !authorEl || !avatarEl) return; 
+
+            wrapper.style.opacity = '0';
+            wrapper.style.transform = 'translateY(-20px)';
+            progressBar.style.transition = 'none';
+            progressBar.style.width = '0%';
+
+            setTimeout(() => {
+                const t = testimonials[currentTestimonialIndex];
+                textEl.textContent = t.text;
+                authorEl.textContent = t.author;
+                authorEl.nextElementSibling.textContent = t.role;
+                avatarEl.textContent = t.author.charAt(0);
+
+                wrapper.style.opacity = '1';
+                wrapper.style.transform = 'translateY(0px)';
+                
+                requestAnimationFrame(() => {
+                    progressBar.style.transition = `width 6000ms linear`;
+                    progressBar.style.width = '100%';
+                });
+                
+            }, 300);
+        }
+
+        function nextTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            updateTestimonialDisplay();
+        }
+        
+        function prevTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonialDisplay();
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextTestimonial, 6000);
+        }
+
+        window.addEventListener('load', () => {
+            injectMentorPhoto(); 
+            updateTestimonialDisplay();
+            resetInterval();
+        });
+        
+    </script>
+</body>
+</html>
