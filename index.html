@@ -40,7 +40,7 @@
         "@type": "ContactPoint",
         "telephone": "+91 99955 15565",
         "contactType": "admissions",
-        "email": "abrahams@abrahamsnclex.com",
+        "email": "founder@abrahamsnclex.com",
         "areaServed": "Global",
         "availableLanguage": ["English", "Malayalam"]
       },
@@ -80,9 +80,9 @@
 
         /* --- Color Palette --- */
         :root {
-            --primary: #13223f;
+            --primary: #13223f; /* Updated Brand Color */
             --primary-light: #1e3a66;
-            --accent: #d97706;
+            --accent: #d97706; /* Amber 600 */
             --accent-hover: #b45309;
         }
 
@@ -193,11 +193,13 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" onclick="switchView('home'); return false;" class="flex items-center gap-3">
+                        <!-- Primary Image Logo -->
                         <img src="https://i.imgur.com/TRn2PDn.jpeg" 
                              alt="Abrahams NCLEX" 
                              class="h-16 w-auto object-contain"
                              onerror="this.style.display='none'; document.getElementById('nav-logo-text').classList.remove('hidden');">
                         
+                        <!-- Fallback Text Logo -->
                         <span id="nav-logo-text" class="hidden serif-font text-2xl font-bold tracking-wide text-white">
                             ABRAHAMS <span class="text-accent italic text-xl">NCLEX</span>
                         </span>
@@ -211,7 +213,7 @@
                     <a href="#mentor" onclick="switchView('home')" class="text-xs uppercase tracking-[0.2em] font-semibold text-slate-300 hover:text-white transition-colors">Mentorship</a>
                     <a href="#testimonials" onclick="switchView('home'); document.getElementById('philosophy').scrollIntoView();" class="text-xs uppercase tracking-[0.2em] font-semibold text-slate-300 hover:text-white transition-colors">Stories</a>
                     
-                    <a href="#contact" onclick="switchView('home')" class="px-8 py-3 bg-white text-primary text-xs uppercase tracking-[0.2em] font-bold rounded-sm hover:bg-slate-100 transition-all shadow-md hover:shadow-lg">Enroll Now</a>
+                    <a href="https://abrahams.graphy.com/courses/NCLEX-in-3-Months--68016e9f000e7c0140714b0b" target="_blank" class="px-8 py-3 bg-white text-primary text-xs uppercase tracking-[0.2em] font-bold rounded-sm hover:bg-slate-100 transition-all shadow-md hover:shadow-lg">Enroll Now</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -229,7 +231,7 @@
                 <a href="#" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-semibold text-slate-800 py-2 hover:text-accent">Home</a>
                 <a href="#program" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-semibold text-slate-800 py-2 hover:text-accent">Program</a>
                 <a href="#mentor" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-semibold text-slate-800 py-2 hover:text-accent">Mentorship</a>
-                <a href="#contact" onclick="switchView('home')" class="text-sm uppercase tracking-widest font-bold text-accent py-2">Enroll Now</a>
+                <a href="https://abrahams.graphy.com/courses/NCLEX-in-3-Months--68016e9f000e7c0140714b0b" target="_blank" class="text-sm uppercase tracking-widest font-bold text-accent py-2">Enroll Now</a>
             </div>
         </div>
     </nav>
@@ -237,7 +239,7 @@
     <!-- MAIN HOME VIEW CONTAINER -->
     <div id="home-view">
         <!-- Hero Section -->
-        <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 flex flex-col items-center justify-center min-h-[90vh] overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50">
+        <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 flex flex-col items-center justify-center min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50">
             <!-- Floating Background Elements -->
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
@@ -269,7 +271,7 @@
                 </p>
                 
                 <div class="fade-in-up delay-300 flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="#contact" class="btn-primary group inline-flex items-center justify-center px-8 py-4 text-xs uppercase tracking-widest font-bold rounded-sm shadow-lg hover:shadow-xl">
+                    <a href="https://abrahams.graphy.com/courses/NCLEX-in-3-Months--68016e9f000e7c0140714b0b" target="_blank" class="btn-primary group inline-flex items-center justify-center px-8 py-4 text-xs uppercase tracking-widest font-bold rounded-sm shadow-lg hover:shadow-xl">
                         Begin Your Journey
                         <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </a>
@@ -319,10 +321,11 @@
                         <span class="text-xs uppercase tracking-[0.2em] text-accent font-bold block mb-4">Why Choose Us</span>
                         <h2 class="serif-font text-3xl md:text-4xl text-primary font-bold">Curated for Excellence</h2>
                     </div>
-                    <a href="#contact" class="hidden md:inline-block text-xs uppercase tracking-widest border border-slate-300 px-6 py-3 hover:border-primary hover:text-primary transition-all font-semibold">Enroll Today</a>
+                    <a href="https://abrahams.graphy.com/courses/NCLEX-in-3-Months--68016e9f000e7c0140714b0b" target="_blank" class="hidden md:inline-block text-xs uppercase tracking-widest border border-slate-300 px-6 py-3 hover:border-primary hover:text-primary transition-all font-semibold">Enroll Today</a>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
                     <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
                         <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                             <i data-lucide="clock" class="w-6 h-6 text-primary group-hover:text-accent transition-colors"></i>
@@ -333,6 +336,7 @@
                         </p>
                     </div>
 
+                    <!-- Feature 2 -->
                     <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
                         <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
                             <i data-lucide="check-square" class="w-6 h-6 text-accent group-hover:text-primary transition-colors"></i>
@@ -343,6 +347,7 @@
                         </p>
                     </div>
 
+                    <!-- Feature 3 -->
                     <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
                         <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                             <i data-lucide="users" class="w-6 h-6 text-primary group-hover:text-accent transition-colors"></i>
@@ -353,6 +358,7 @@
                         </p>
                     </div>
 
+                    <!-- Feature 4 -->
                     <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
                         <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
                             <i data-lucide="user-check" class="w-6 h-6 text-accent group-hover:text-primary transition-colors"></i>
@@ -363,6 +369,7 @@
                         </p>
                     </div>
 
+                    <!-- Feature 5 -->
                     <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
                         <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                             <i data-lucide="zap" class="w-6 h-6 text-primary group-hover:text-accent transition-colors"></i>
@@ -373,8 +380,11 @@
                         </p>
                     </div>
 
+                    <!-- Feature 6 -->
                     <div class="feature-card bg-white p-10 shadow-sm rounded-lg border border-slate-100 group">
+                        <!-- Updated Container: Removed flex centering, added relative for absolute positioning -->
                         <div class="w-12 h-12 bg-orange-50 rounded-lg mb-6 group-hover:bg-accent transition-colors relative">
+                            <!-- Custom Bilingual Icon: Diagonal Placement -->
                             <span class="absolute top-1.5 left-2.5 text-accent group-hover:text-primary transition-colors font-serif font-bold text-lg leading-none">A</span>
                             <span class="absolute bottom-1 right-2 text-accent group-hover:text-primary transition-colors font-sans font-bold text-xl leading-none">അ</span>
                         </div>
@@ -391,17 +401,21 @@
         <section id="mentor" class="pt-24 lg:pt-32 pb-24 bg-white">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                    <!-- Image Block -->
                     <div class="w-full lg:w-1/2">
                         <div class="relative w-full">
+                            <!-- Using original vertical image in container -->
                             <div id="mentor-photo-container" class="w-full flex items-center justify-center text-slate-300">
                                 <div class="text-center py-20 bg-slate-50 w-full rounded-2xl" id="mentor-photo-fallback">
                                     <i data-lucide="image" class="w-12 h-12 mx-auto mb-2 opacity-50 text-accent"></i>
                                     <span class="text-xs uppercase tracking-widest font-bold">Mentor: Accama Abraham</span>
                                 </div>
+                                <!-- The actual image will be injected here by JavaScript -->
                             </div>
                         </div>
                     </div>
 
+                    <!-- Text Block -->
                     <div class="w-full lg:w-1/2">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="h-px w-8 bg-accent"></div>
@@ -432,6 +446,7 @@
 
         <!-- Philosophy / Mission / Testimonials Slider -->
         <section id="philosophy" class="pt-24 pb-0 bg-primary text-white relative overflow-hidden">
+            <!-- Background Texture -->
             <div class="absolute inset-0 opacity-10 pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -443,11 +458,13 @@
                 </svg>
             </div>
             
+            <!-- Abstract Decoration -->
             <div class="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
             <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <!-- Left: Philosophy Text -->
                     <div class="order-2 lg:order-1 pb-24 lg:pb-40">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="w-12 h-0.5 bg-accent"></span>
@@ -462,13 +479,18 @@
                         </p>
                     </div>
                     
+                    <!-- Right: Impressive Testimonial Card -->
                     <div class="order-1 lg:order-2 relative perspective-1000 pb-24 lg:pb-40">
+                        <!-- Main White Card -->
                         <div id="testimonial-card" class="relative bg-white/5 backdrop-blur-md border border-white/10 text-white p-10 md:p-12 rounded-2xl shadow-2xl overflow-hidden min-h-[400px] flex flex-col justify-between transform transition-all duration-500 hover:-translate-y-1">
                             
+                            <!-- Giant Decorative Quote -->
                             <div class="absolute -top-6 -left-2 text-[10rem] leading-none text-white/5 serif-font select-none z-0">"</div>
                             
+                            <!-- Content Wrapper -->
                             <div class="relative z-10 flex-grow flex flex-col justify-center">
                                 <div id="testimonial-content-wrapper" class="transition-all duration-500 transform translate-y-0 opacity-100">
+                                    <!-- Stars -->
                                     <div class="flex gap-1 mb-6 text-accent">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
@@ -489,27 +511,36 @@
                                 </div>
                             </div>
 
+                            <!-- Progress Bar -->
                             <div class="absolute bottom-0 left-0 w-full h-1 bg-white/10">
                                 <div id="progress-bar" class="h-full bg-accent w-0"></div>
                             </div>
+                            
+                            <!-- Navigation Arrows (Absolute) -->
                         </div>
                     </div>
                 </div>
             </div>
             
+            <!-- Flow Connector Gradient (Enhanced Blend) -->
             <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent to-primary z-20 pointer-events-none"></div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Section (Premium High Contrast - Seamless Flow, Clean Background) -->
         <section id="contact" class="pt-0 pb-24 bg-primary relative overflow-hidden">
+            <!-- BLEND FIX: Top Fade from Solid Color -->
             <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-primary to-transparent z-10 pointer-events-none"></div>
 
+            <!-- Connecting Beam (Flows through the blend) -->
             <div class="absolute top-[-100px] left-1/2 w-px h-64 bg-gradient-to-b from-transparent via-accent/50 to-transparent -translate-x-1/2 z-30"></div>
             
+            <!-- Glowing Dot at Junction -->
             <div class="absolute top-0 left-1/2 w-1.5 h-1.5 rounded-full bg-accent -translate-x-1/2 z-30 shadow-[0_0_15px_2px_rgba(217,119,6,0.6)]"></div>
 
+            <!-- Content Container -->
             <div class="max-w-6xl mx-auto px-6 lg:px-12 relative z-20 pt-24">
                 <div class="text-center mb-20">
+                    <!-- Clean Label -->
                     <h4 class="text-accent font-bold uppercase tracking-[0.25em] text-xs mb-6 drop-shadow-[0_0_8px_rgba(217,119,6,0.3)]">
                         Get In Touch
                     </h4>
@@ -522,16 +553,19 @@
                     </p>
                 </div>
                 
+                <!-- New Open Layout (No Boxes) -->
                 <div class="border-t border-white/10 pt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
                     
-                    <a href="mailto:abrahams@abrahamsnclex.com" class="group flex flex-col items-center text-center">
+                    <!-- Email -->
+                    <a href="mailto:founder@abrahamsnclex.com" class="group flex flex-col items-center text-center">
                         <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-accent group-hover:border-accent group-hover:scale-110 transition-all duration-300 shadow-lg">
                             <i data-lucide="mail" class="w-8 h-8"></i>
                         </div>
                         <h3 class="serif-font text-2xl text-white mb-3 group-hover:text-accent transition-colors">Email Us</h3>
-                        <span class="text-blue-200 font-light text-base break-words hover:text-white transition-colors">abrahams@abrahamsnclex.com</span>
+                        <span class="text-blue-200 font-light text-base break-words hover:text-white transition-colors">founder@abrahamsnclex.com</span>
                     </a>
 
+                    <!-- Phone -->
                     <a href="tel:+919995515565" class="group flex flex-col items-center text-center">
                         <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-accent group-hover:border-accent group-hover:scale-110 transition-all duration-300 shadow-lg">
                             <i data-lucide="phone" class="w-8 h-8"></i>
@@ -541,6 +575,7 @@
                         <span class="text-blue-200/50 text-xs uppercase tracking-widest mt-2 block">Mon-Sat, 9am - 6pm IST</span>
                     </a>
 
+                    <!-- Location -->
                     <div class="group flex flex-col items-center text-center cursor-default">
                         <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-accent group-hover:border-accent group-hover:scale-110 transition-all duration-300 shadow-lg">
                             <i data-lucide="map-pin" class="w-8 h-8"></i>
@@ -554,8 +589,9 @@
         </section>
     </div>
 
-    <!-- MENTOR PROFILE VIEW CONTAINER -->
+    <!-- MENTOR PROFILE VIEW CONTAINER (Redesigned: Editorial / Executive Bio Style) -->
     <div id="mentor-view" class="hidden-view pt-32 pb-24 bg-slate-50 min-h-screen">
+        <!-- Sticky Navigation Bar for Profile -->
         <div class="fixed top-24 left-0 w-full z-30 pointer-events-none">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 <button onclick="switchView('home')" class="pointer-events-auto inline-flex items-center px-4 py-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-full shadow-sm text-sm font-bold text-slate-600 hover:text-primary hover:border-primary transition-all group">
@@ -568,10 +604,13 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                 
+                <!-- LEFT COLUMN: Sticky Image & Quick Info -->
                 <div class="lg:col-span-5">
                     <div class="lg:sticky lg:top-40 space-y-8">
+                        <!-- Profile Image Card -->
                         <div class="relative bg-white p-2 rounded-2xl shadow-xl border border-slate-100 rotate-1 hover:rotate-0 transition-transform duration-500">
                             <div class="aspect-[3/4] overflow-hidden rounded-xl relative">
+                                <!-- UPDATED: Switched back to the main homepage image -->
                                 <img src="https://i.imgur.com/JtWXokr.jpeg" 
                                      alt="Accama Abraham" 
                                      class="w-full h-full object-cover"
@@ -584,9 +623,12 @@
                             </div>
                         </div>
 
+                        <!-- Quote Card -->
                         <div class="bg-primary text-white p-8 rounded-xl shadow-lg border-l-4 border-accent relative overflow-hidden hidden lg:block">
+                            <!-- Moved icon to background-right to avoid overlapping text -->
                             <i class="fas fa-quote-right text-6xl text-accent/10 absolute -bottom-4 -right-4 transform rotate-12"></i>
                             
+                            <!-- Removed manual quotation marks from text and increased relative z-index -->
                             <p class="serif-font text-lg italic leading-relaxed relative z-10 text-blue-50">
                                 Every patient, organization, and country has taught me something unique. My goal is to pass that global wisdom on to you.
                             </p>
@@ -594,8 +636,10 @@
                     </div>
                 </div>
 
+                <!-- RIGHT COLUMN: Biography Content -->
                 <div class="lg:col-span-7 space-y-16">
                     
+                    <!-- Intro -->
                     <div class="space-y-6">
                         <span class="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest rounded-full">Global Nursing Leader</span>
                         <h2 class="serif-font text-4xl md:text-5xl font-bold text-primary leading-tight">
@@ -606,13 +650,16 @@
                         </p>
                     </div>
 
+                    <!-- Visual Break: Horizontal Image -->
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
                         <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                         <img src="https://i.imgur.com/oOYiXVg.jpeg" 
                              alt="Training Session" 
                              class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <!-- Removed the text overlay div here -->
                     </div>
 
+                    <!-- Detailed Bio Sections -->
                     <div class="space-y-12 divide-y divide-slate-200">
                         
                         <div class="pt-8">
@@ -649,6 +696,7 @@
 
                     </div>
 
+                    <!-- Key Achievements Grid -->
                     <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
                         <h3 class="serif-font text-3xl font-bold text-primary mb-8 text-center">Key Achievements</h3>
                         
@@ -697,10 +745,11 @@
                         </div>
                     </div>
 
+                    <!-- Bottom CTA -->
                     <div class="text-center pt-10">
-                        <button onclick="switchView('contact'); document.getElementById('contact').scrollIntoView();" class="btn-primary px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform">
+                        <a href="https://abrahams.graphy.com/courses/NCLEX-in-3-Months--68016e9f000e7c0140714b0b" target="_blank" class="inline-block btn-primary px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 transition-transform">
                             Join Accama's Program
-                        </button>
+                        </a>
                     </div>
 
                 </div>
@@ -714,17 +763,19 @@
             <div class="mb-6 md:mb-0 space-y-4 text-center md:text-left">
                 <!-- Footer Logo -->
                 <div class="mb-4">
+                     <!-- Primary Image Logo: Updated with your link -->
                      <img src="https://i.imgur.com/TRn2PDn.jpeg" 
                           alt="Abrahams NCLEX" 
                           class="h-10 w-auto object-contain hover:opacity-90 transition-opacity"
                           onerror="this.style.display='none'; document.getElementById('footer-logo-text').classList.remove('hidden');">
                     
+                     <!-- Fallback Text Logo -->
                      <span id="footer-logo-text" class="hidden serif-font text-xl font-bold tracking-wide text-white">
                         ABRAHAMS <span class="text-accent italic text-lg">NCLEX</span>
                     </span>
                 </div>
                 
-                <div class="text-slate-500">&copy; <span id="year"></span> Abrahams NCLEX</div>
+                <div class="text-slate-500">&copy; 2026 Abrahams NCLEX</div>
                 <div class="flex space-x-4 text-[10px] text-slate-500">
                     <a href="#" class="hover:text-white transition-colors">Privacy</a>
                     <a href="#" class="hover:text-white transition-colors">Terms</a>
@@ -740,36 +791,44 @@
     </footer>
 
     <script>
+        // --- CONFIGURATION: Mentor Photo URL ---
+        // Reverted to original vertical image for home page use
         const mentorPhotoUrl = 'https://i.imgur.com/JtWXokr.jpeg'; 
+        // ----------------------------------------
         
-        document.getElementById('year').textContent = new Date().getFullYear();
         lucide.createIcons();
 
+        // Image Injection Logic for Mentor Section
         function injectMentorPhoto() {
             const container = document.getElementById('mentor-photo-container');
             const fallback = document.getElementById('mentor-photo-fallback');
             
-            if (!container) return; 
+            if (!container) return; // Exit if not on home view yet
 
             if (mentorPhotoUrl) {
+                // Create the image element
                 const img = document.createElement('img');
                 img.src = mentorPhotoUrl;
                 img.alt = "Accama Abraham, Lead Mentor";
                 
+                // UPDATED: Reverted to h-full object-cover for vertical image
                 img.className = 'w-full h-full object-cover rounded-2xl shadow-sm';
                 
+                // On successful load, remove the fallback placeholder
                 img.onload = () => {
                     container.innerHTML = '';
                     container.appendChild(img);
                 };
                 
+                // If image fails to load, keep the fallback placeholder
                 img.onerror = () => {
                     console.error("Mentor photo failed to load.");
                     container.appendChild(fallback);
                 };
 
+                // Add the image (it will swap on load/error)
                 container.appendChild(img);
-                fallback.style.display = 'none'; 
+                fallback.style.display = 'none'; // Hide fallback initially
                 
             } else if (fallback) {
                 // If URL is empty, just show the fallback
@@ -777,6 +836,7 @@
             }
         }
         
+        // --- View Switching Logic (SPA) ---
         function switchView(viewName) {
             const homeView = document.getElementById('home-view');
             const mentorView = document.getElementById('mentor-view');
@@ -788,12 +848,14 @@
             } else {
                 homeView.style.display = 'block';
                 mentorView.style.display = 'none';
-                if (viewName === 'contact') {
-                    // Handled by inline scrollIntoView, but keeping this safe
+                // If switching to contact, we don't need to scroll top, otherwise we do
+                if (viewName !== 'contact') {
+                   // window.scrollTo(0, 0);
                 }
             }
         }
 
+        // --- Mobile Menu Logic ---
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -809,6 +871,7 @@
             }
         }
         
+        // --- Testimonial Carousel Logic (Simplified) ---
         const testimonials = [
             { text: "\"Abrahams is a game-changer. The emphasis on subject mastery boosted my confidence in appearing for NCLEX.\"", author: "Neena", role: "Registered Nurse" },
             { text: "\"Abrahams has been instrumental in advancing my nursing career. The courses helped me enhance my skills and knowledge, making me a better nurse and crack NCLEX.\"", author: "Sara Johnson", role: "Registered Nurse" },
@@ -827,21 +890,25 @@
             
             if (!wrapper || !progressBar || !textEl || !authorEl || !avatarEl) return; 
 
+            // 1. Animate Out
             wrapper.style.opacity = '0';
             wrapper.style.transform = 'translateY(-20px)';
             progressBar.style.transition = 'none';
             progressBar.style.width = '0%';
 
             setTimeout(() => {
+                // 2. Update Content
                 const t = testimonials[currentTestimonialIndex];
                 textEl.textContent = t.text;
                 authorEl.textContent = t.author;
                 authorEl.nextElementSibling.textContent = t.role;
                 avatarEl.textContent = t.author.charAt(0);
 
+                // 3. Animate In
                 wrapper.style.opacity = '1';
                 wrapper.style.transform = 'translateY(0px)';
                 
+                // 4. Start Progress Bar
                 requestAnimationFrame(() => {
                     progressBar.style.transition = `width 6000ms linear`;
                     progressBar.style.width = '100%';
@@ -866,8 +933,9 @@
             slideInterval = setInterval(nextTestimonial, 6000);
         }
 
+        // Initialize on load
         window.addEventListener('load', () => {
-            injectMentorPhoto(); 
+            injectMentorPhoto(); // Run photo injection logic
             updateTestimonialDisplay();
             resetInterval();
         });
