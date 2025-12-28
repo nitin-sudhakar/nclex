@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,135 +8,129 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
         body { font-family: 'Montserrat', sans-serif; }
         .serif-font { font-family: 'Playfair Display', serif; }
+        
         /* Brand Colors */
         :root { --primary: #13223f; --accent: #d97706; }
         .text-primary { color: var(--primary); }
         .bg-primary { background-color: var(--primary); }
+        .text-accent { color: var(--accent); }
+
+        /* Animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
-    <!-- Simplified Navigation -->
-    <nav class="bg-primary py-4 px-6 border-b border-white/10 shadow-md">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                 <img src="https://i.imgur.com/TRn2PDn.jpeg" alt="Abrahams NCLEX" class="h-10 w-auto object-contain">
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-primary py-4 px-6 border-b border-white/10 shadow-md">
+        <!-- Optimized max-width to match privacy page layout (4xl) -->
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                 <img src="https://i.imgur.com/TRn2PDn.jpeg" alt="Abrahams NCLEX" class="h-8 md:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity">
             </a>
-            <a href="index.html" class="text-sm font-bold text-white hover:text-orange-500 transition-colors uppercase tracking-widest border border-white/20 px-4 py-2 rounded-sm hover:bg-white/10">
-                Back to Home
+            <a href="index.html" class="text-xs md:text-sm font-bold text-white hover:text-accent transition-colors uppercase tracking-widest flex items-center gap-2">
+                <i class="fas fa-arrow-left text-xs"></i> <span>Home</span>
             </a>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow py-16 px-6">
-        <div class="max-w-4xl mx-auto bg-white p-8 md:p-16 rounded-xl shadow-lg border border-slate-100">
-            <h1 class="serif-font text-3xl md:text-5xl font-bold text-primary mb-2 text-center">Terms and Conditions of Use</h1>
-            <p class="text-center text-slate-500 mb-12 italic">Last Updated: December 2025</p>
+    <main class="flex-grow py-12 px-4 md:px-6">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 rounded-xl shadow-sm border border-slate-100 fade-in-up">
             
-            <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed">
-                <p class="mb-8">These Terms and Conditions ("Terms") govern your access to and use of the services provided by Abrahams ("we," "us," or "our"). By using our services, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use our services.</p>
+            <header class="mb-8 md:mb-12 border-b border-slate-100 pb-6 md:pb-8">
+                <span class="text-accent text-xs font-bold uppercase tracking-widest block mb-2">Legal</span>
+                <h1 class="serif-font text-3xl md:text-5xl font-bold text-primary leading-tight">Terms and Conditions of Use</h1>
+                <p class="text-slate-500 text-xs md:text-sm mt-4">Last Updated: December 2025</p>
+            </header>
+            
+            <div class="prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-primary prose-a:text-accent hover:prose-a:text-orange-700 text-slate-600 leading-relaxed">
+                <!-- Optimized text size for mobile reading (base) vs desktop (lg) -->
+                <p class="text-base md:text-lg">These Terms and Conditions ("Terms") govern your access to and use of the services provided by Abrahams ("we," "us," or "our"). By using our services, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use our services.</p>
 
-                <div class="space-y-10">
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">1. Acceptance of Terms</h3>
-                        <p>By enrolling in or using the services provided by Abrahams, you acknowledge that you have read, understood, and agree to be bound by these Terms and any additional policies or guidelines provided by us from time to time. These Terms constitute a legally binding agreement between you and Abrahams.</p>
-                    </section>
+                <h3 class="text-lg md:text-xl mt-8 mb-3">1. Acceptance of Terms</h3>
+                <p>By enrolling in or using the services provided by Abrahams, you acknowledge that you have read, understood, and agree to be bound by these Terms and any additional policies or guidelines provided by us from time to time. These Terms constitute a legally binding agreement between you and Abrahams.</p>
 
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">2. Services Provided</h3>
-                        <p>Abrahams provides online coaching, study materials, mock exams, and other resources designed to assist individuals in preparing for the NCLEX examination. We reserve the right to modify, suspend, or discontinue any aspect of our services at our sole discretion.</p>
-                    </section>
+                <h3 class="text-lg md:text-xl mt-8 mb-3">2. Services Provided</h3>
+                <p>Abrahams provides online coaching, study materials, mock exams, and other resources designed to assist individuals in preparing for the NCLEX examination. We reserve the right to modify, suspend, or discontinue any aspect of our services at our sole discretion.</p>
 
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">3. No Refund Policy</h3>
-                        <p>Abrahams maintains a strict no-refund policy for all coaching services and materials provided. Once a payment has been made for any course or material, you will not be entitled to a refund under any circumstances, except as determined by us under extraordinary circumstances at our sole discretion.</p>
-                        <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-primary mt-4">
-                            <h4 class="font-bold text-primary mb-2">Extraordinary Circumstances for Refund:</h4>
-                            <p class="text-sm">Refunds may only be considered if an exceptional situation arises (such as a genuine technical issue that prevents access to course materials for an extended period), and only at the sole discretion of Abrahams. Any decision regarding a refund is final and not subject to appeal. You agree that no other circumstances, including personal dissatisfaction, will entitle you to a refund.</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">4. Payment Terms</h3>
-                        <p>All fees for our services must be paid in full at the time of enrollment. Abrahams reserves the right to change the pricing and fees for its services at any time without prior notice. If any changes occur, the new pricing will apply to all future transactions.</p>
-                        <p class="mt-2">Payments are processed through our third-party payment processor, and you agree to abide by the payment processor’s terms and conditions.</p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">5. Intellectual Property</h3>
-                        <p>All content, materials, and resources provided by Abrahams, including but not limited to course materials, videos, documents, software, and trademarks, are the exclusive intellectual property of Abrahams and are protected by copyright, trademark, and other laws. You are granted a limited, non-transferable, non-exclusive license to use our content solely for personal, non-commercial educational purposes.</p>
-                        <p class="mt-2 font-semibold text-red-600">You agree not to copy, reproduce, distribute, or exploit any materials provided by Abrahams without our prior written consent.</p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">6. User Obligations</h3>
-                        <p>By accessing and using Abrahams services, you agree to:</p>
-                        <ul class="list-disc pl-6 space-y-2 mt-2">
-                            <li>Provide accurate and complete information during registration and keep your account details up to date.</li>
-                            <li>Use the services solely for lawful purposes related to preparing for the NCLEX examination.</li>
-                            <li>Not engage in any conduct that could harm, disrupt, or interfere with the proper functioning of Abrahams services.</li>
-                            <li>Not share or distribute your access to Abrahams materials or account credentials.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">7. Account Suspension or Termination</h3>
-                        <p>Abrahams reserves the right to suspend or terminate your access to our services at any time, for any reason, without notice, including but not limited to:</p>
-                        <ul class="list-disc pl-6 space-y-2 mt-2">
-                            <li>Violation of these Terms.</li>
-                            <li>Engaging in fraudulent, abusive, or illegal activity.</li>
-                            <li>Non-payment of fees.</li>
-                        </ul>
-                        <p class="mt-2">Upon suspension or termination, you will forfeit any access to course materials and will not be entitled to a refund.</p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">8. Limitation of Liability</h3>
-                        <p>To the fullest extent permitted by law, Abrahams shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, loss of data, or business interruption, arising out of or in connection with your use or inability to use our services, even if we have been advised of the possibility of such damages.</p>
-                        <p class="mt-2">You acknowledge that Abrahams does not guarantee any specific results or success in passing the NCLEX examination, and we are not responsible for your personal performance or success.</p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">9. Dispute Resolution</h3>
-                        <p>Any dispute arising out of or relating to these Terms or the services provided by Abrahams will be governed by the laws of India, and any legal action or proceeding will be conducted exclusively in the courts located in Kochi, Kerala. You consent to the exclusive jurisdiction and venue of such courts for any disputes.</p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">10. Modification of Terms</h3>
-                        <p>Abrahams reserves the right to modify these Terms at any time. We will notify users of any significant changes by posting the updated Terms on our website or notifying users via email. Your continued use of our services after such modifications will constitute your acceptance of the modified Terms.</p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">11. Privacy Policy</h3>
-                        <p>Your use of our services is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information. Please review our Privacy Policy to understand our practices.</p>
-                    </section>
-
-                    <section>
-                        <h3 class="text-xl font-bold text-primary mb-3">12. Governing Law and Jurisdiction</h3>
-                        <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of India. Any disputes or claims arising from or related to these Terms shall be resolved in the competent courts of Kochi, Kerala, India, and you consent to the exclusive jurisdiction of such courts.</p>
-                    </section>
+                <h3 class="text-lg md:text-xl mt-8 mb-3">3. No Refund Policy</h3>
+                <p>Abrahams maintains a strict no-refund policy for all coaching services and materials provided. Once a payment has been made for any course or material, you will not be entitled to a refund under any circumstances, except as determined by us under extraordinary circumstances at our sole discretion.</p>
+                
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-primary mt-4">
+                    <h4 class="font-bold text-primary mb-2 text-sm uppercase tracking-wider">Extraordinary Circumstances for Refund:</h4>
+                    <p class="text-sm mb-0">Refunds may only be considered if an exceptional situation arises (such as a genuine technical issue that prevents access to course materials for an extended period), and only at the sole discretion of Abrahams. Any decision regarding a refund is final and not subject to appeal. You agree that no other circumstances, including personal dissatisfaction, will entitle you to a refund.</p>
                 </div>
 
+                <h3 class="text-lg md:text-xl mt-8 mb-3">4. Payment Terms</h3>
+                <p>All fees for our services must be paid in full at the time of enrollment. Abrahams reserves the right to change the pricing and fees for its services at any time without prior notice. If any changes occur, the new pricing will apply to all future transactions.</p>
+                <p class="mt-2">Payments are processed through our third-party payment processor, and you agree to abide by the payment processor’s terms and conditions.</p>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">5. Intellectual Property</h3>
+                <p>All content, materials, and resources provided by Abrahams, including but not limited to course materials, videos, documents, software, and trademarks, are the exclusive intellectual property of Abrahams and are protected by copyright, trademark, and other laws. You are granted a limited, non-transferable, non-exclusive license to use our content solely for personal, non-commercial educational purposes.</p>
+                <p class="mt-2 font-semibold text-red-600">You agree not to copy, reproduce, distribute, or exploit any materials provided by Abrahams without our prior written consent.</p>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">6. User Obligations</h3>
+                <p>By accessing and using Abrahams services, you agree to:</p>
+                <ul class="list-disc pl-5 space-y-2 marker:text-accent">
+                    <li>Provide accurate and complete information during registration and keep your account details up to date.</li>
+                    <li>Use the services solely for lawful purposes related to preparing for the NCLEX examination.</li>
+                    <li>Not engage in any conduct that could harm, disrupt, or interfere with the proper functioning of Abrahams services.</li>
+                    <li>Not share or distribute your access to Abrahams materials or account credentials.</li>
+                </ul>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">7. Account Suspension or Termination</h3>
+                <p>Abrahams reserves the right to suspend or terminate your access to our services at any time, for any reason, without notice, including but not limited to:</p>
+                <ul class="list-disc pl-5 space-y-2 marker:text-accent">
+                    <li>Violation of these Terms.</li>
+                    <li>Engaging in fraudulent, abusive, or illegal activity.</li>
+                    <li>Non-payment of fees.</li>
+                </ul>
+                <p class="mt-2">Upon suspension or termination, you will forfeit any access to course materials and will not be entitled to a refund.</p>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">8. Limitation of Liability</h3>
+                <p>To the fullest extent permitted by law, Abrahams shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, loss of data, or business interruption, arising out of or in connection with your use or inability to use our services, even if we have been advised of the possibility of such damages.</p>
+                <p class="mt-2">You acknowledge that Abrahams does not guarantee any specific results or success in passing the NCLEX examination, and we are not responsible for your personal performance or success.</p>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">9. Dispute Resolution</h3>
+                <p>Any dispute arising out of or relating to these Terms or the services provided by Abrahams will be governed by the laws of India, and any legal action or proceeding will be conducted exclusively in the courts located in Kochi, Kerala. You consent to the exclusive jurisdiction and venue of such courts for any disputes.</p>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">10. Modification of Terms</h3>
+                <p>Abrahams reserves the right to modify these Terms at any time. We will notify users of any significant changes by posting the updated Terms on our website or notifying users via email. Your continued use of our services after such modifications will constitute your acceptance of the modified Terms.</p>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">11. Privacy Policy</h3>
+                <p>Your use of our services is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information. Please review our Privacy Policy to understand our practices.</p>
+
+                <h3 class="text-lg md:text-xl mt-8 mb-3">12. Governing Law and Jurisdiction</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of India. Any disputes or claims arising from or related to these Terms shall be resolved in the competent courts of Kochi, Kerala, India, and you consent to the exclusive jurisdiction of such courts.</p>
+
                 <!-- Contact Box -->
-                <div class="mt-16 p-8 bg-slate-50 rounded-xl border border-slate-200">
-                    <h3 class="text-2xl font-bold text-primary mb-6">Contact Information</h3>
-                    <p class="mb-4">For any questions or concerns regarding these Terms, please contact us at:</p>
-                    <div class="space-y-3 font-medium">
+                <div class="mt-12 p-6 md:p-8 bg-slate-50 rounded-xl border border-slate-200">
+                    <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">Contact Information</h3>
+                    <p class="mb-4 text-sm md:text-base">For any questions or concerns regarding these Terms, please contact us at:</p>
+                    <div class="space-y-3 font-medium text-sm md:text-base">
                         <p class="text-primary font-bold">Abrahams</p>
                         <p class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-orange-500"></i>
-                            <a href="mailto:founder@abrahamsnclex.com" class="hover:text-orange-600 transition-colors">founder@abrahamsnclex.com</a>
+                            <i class="fas fa-envelope text-accent"></i>
+                            <a href="mailto:founder@abrahamsnclex.com" class="hover:text-accent transition-colors">founder@abrahamsnclex.com</a>
                         </p>
                         <p class="flex items-center gap-3">
-                            <i class="fas fa-phone text-orange-500"></i>
-                            <a href="tel:+919995515565" class="hover:text-orange-600 transition-colors">+91 99955 15565</a>
+                            <i class="fas fa-phone text-accent"></i>
+                            <a href="tel:+919995515565" class="hover:text-accent transition-colors">+91 99955 15565</a>
                         </p>
                         <p class="flex items-center gap-3">
-                            <i class="fas fa-globe text-orange-500"></i>
-                            <a href="https://www.abrahamsnclex.com" class="hover:text-orange-600 transition-colors">www.abrahamsnclex.com</a>
+                            <i class="fas fa-globe text-accent"></i>
+                            <a href="https://www.abrahamsnclex.com" class="hover:text-accent transition-colors">www.abrahamsnclex.com</a>
                         </p>
                     </div>
                 </div>
@@ -145,9 +139,16 @@
         </div>
     </main>
 
-    <!-- Simple Footer -->
-    <footer class="bg-primary text-slate-400 py-8 text-center text-xs uppercase tracking-widest border-t border-white/10">
-        &copy; 2026 Abrahams NCLEX. All rights reserved.
+    <!-- Footer -->
+    <footer class="bg-primary text-slate-400 py-8 border-t border-slate-800">
+        <!-- Optimized max-width to match privacy page layout (4xl) -->
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-widest">
+            <span>&copy; 2026 Abrahams NCLEX</span>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+            </div>
+        </div>
     </footer>
 
 </body>
