@@ -1,69 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Abrahams </title>
+    <title>Privacy Policy | Abrahams NCLEX</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
         body { font-family: 'Montserrat', sans-serif; }
         .serif-font { font-family: 'Playfair Display', serif; }
+        
         :root { --primary: #13223f; --accent: #d97706; }
         .text-primary { color: var(--primary); }
         .bg-primary { background-color: var(--primary); }
+        .text-accent { color: var(--accent); }
+
+        /* Animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
-    <!-- Simple Navigation -->
-    <nav class="bg-primary py-4 px-6 border-b border-white/10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                 <img src="https://i.imgur.com/TRn2PDn.jpeg" alt="Abrahams NCLEX" class="h-10 w-auto object-contain">
+    <!-- Sticky Navigation -->
+    <!-- UPDATED: Removed '/95' and 'backdrop-blur-md' to ensure solid navy background -->
+    <nav class="sticky top-0 z-50 bg-primary py-4 px-6 border-b border-white/10 shadow-md">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                 <img src="https://i.imgur.com/TRn2PDn.jpeg" alt="Abrahams NCLEX" class="h-8 md:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity">
             </a>
-            <a href="index.html" class="text-sm font-bold text-white hover:text-orange-500 transition-colors uppercase tracking-widest">Back to Home</a>
+            <a href="index.html" class="text-xs md:text-sm font-bold text-white hover:text-accent transition-colors uppercase tracking-widest flex items-center gap-2">
+                <i class="fas fa-arrow-left text-xs"></i> <span>Home</span>
+            </a>
         </div>
     </nav>
 
     <!-- Content -->
-    <main class="flex-grow py-16 px-6">
-        <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-sm border border-slate-100">
-            <h1 class="serif-font text-3xl md:text-4xl font-bold text-primary mb-8 border-b border-slate-200 pb-4">Privacy Policy</h1>
+    <main class="flex-grow py-12 px-4 md:px-6">
+        <div class="max-w-4xl mx-auto bg-white p-6 md:p-12 rounded-xl shadow-sm border border-slate-100 fade-in-up">
             
-            <div class="prose prose-slate max-w-none">
-                <p>At Abrahams NCLEX, we are committed to protecting your privacy. This policy outlines how we collect, use, and safeguard your personal information.</p>
+            <header class="mb-8 md:mb-12 border-b border-slate-100 pb-6 md:pb-8">
+                <span class="text-accent text-xs font-bold uppercase tracking-widest block mb-2">Legal</span>
+                <h1 class="serif-font text-3xl md:text-5xl font-bold text-primary">Privacy Policy</h1>
+                <p class="text-slate-500 text-xs md:text-sm mt-4">Last Updated: December 2025</p>
+            </header>
+            
+            <div class="prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-primary prose-a:text-accent hover:prose-a:text-orange-700">
+                <p class="text-lg leading-relaxed text-slate-600">At Abrahams NCLEX, we are committed to protecting your privacy. This policy outlines how we collect, use, and safeguard your personal information.</p>
 
-                <h3 class="text-lg font-bold text-primary mt-6 mb-2">1. Information We Collect</h3>
+                <h3 class="text-lg md:text-xl mt-8 mb-4">1. Information We Collect</h3>
                 <p>We collect information you provide directly to us when you enroll in a course, contact us for inquiries, or sign up for updates. This may include your name, email address, phone number, and payment details.</p>
 
-                <h3 class="text-lg font-bold text-primary mt-6 mb-2">2. How We Use Your Information</h3>
+                <h3 class="text-lg md:text-xl mt-8 mb-4">2. How We Use Your Information</h3>
                 <p>We use your information to:</p>
-                <ul class="list-disc pl-5 space-y-1">
+                <ul class="list-disc pl-5 space-y-2 marker:text-accent">
                     <li>Process your enrollment and payments.</li>
                     <li>Provide customer support and mentorship.</li>
                     <li>Send course updates and educational materials.</li>
                     <li>Improve our website and services.</li>
                 </ul>
 
-                <h3 class="text-lg font-bold text-primary mt-6 mb-2">3. Data Security</h3>
+                <h3 class="text-lg md:text-xl mt-8 mb-4">3. Data Security</h3>
                 <p>We implement industry-standard security measures to protect your personal data. We do not sell, trade, or otherwise transfer your personal information to outside parties without your consent, except as required by law.</p>
 
-                <h3 class="text-lg font-bold text-primary mt-6 mb-2">4. Third-Party Links</h3>
+                <h3 class="text-lg md:text-xl mt-8 mb-4">4. Third-Party Links</h3>
                 <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites.</p>
 
-                <h3 class="text-lg font-bold text-primary mt-6 mb-2">5. Contact Us</h3>
-                <p>If you have any questions regarding this privacy policy, you may contact us at <a href="mailto:founder@abrahamsnclex.com" class="text-blue-600 hover:underline">founder@abrahamsnclex.com</a>.</p>
-                
-                <p class="mt-8 text-sm text-slate-500">Last updated: December 2025</p>
+                <h3 class="text-lg md:text-xl mt-8 mb-4">5. Contact Us</h3>
+                <div class="bg-slate-50 p-6 rounded-lg border border-slate-100">
+                    <p class="mb-0">If you have any questions regarding this privacy policy, you may contact us at:</p>
+                    <a href="mailto:founder@abrahamsnclex.com" class="block mt-2 font-bold text-lg">founder@abrahamsnclex.com</a>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- Simple Footer -->
-    <footer class="bg-primary text-slate-400 py-8 text-center text-xs uppercase tracking-widest">
-        &copy; 2026 Abrahams NCLEX. All rights reserved.
+    <!-- Footer -->
+    <footer class="bg-primary text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-widest">
+            <span>&copy; 2026 Abrahams NCLEX</span>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
     </footer>
 
 </body>
